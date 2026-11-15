@@ -1,0 +1,13 @@
+{
+  "name": "peaknote-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PeakNote V1: PWA offline para docentes de primaria (Venezuela). Sin dependencias.",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node --test",
+    "sw": "node tools/update-sw.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

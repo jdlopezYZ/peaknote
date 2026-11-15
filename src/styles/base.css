@@ -1,0 +1,37 @@
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+  background-image: var(--bg-grad);
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+}
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3, p { margin: 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.muted { color: var(--text-muted); }
+.capitalize::first-letter { text-transform: uppercase; }
+.center { text-align: center; }
+.icon { display: inline-flex; flex: none; }
+.stack { display: grid; gap: var(--s-3); }
+
+/* Transiciones de vista */
+::view-transition-old(root) { animation: fade-out var(--dur-fast) var(--ease) both; }
+::view-transition-new(root) { animation: fade-in var(--dur) var(--ease) both; }
+@keyframes fade-in { from { opacity: 0; transform: translateY(6px); } }
+@keyframes fade-out { to { opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+.fatal { padding: var(--s-8); text-align: center; display: grid; gap: var(--s-3); }

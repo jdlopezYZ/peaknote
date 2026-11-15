@@ -1,0 +1,118 @@
+/* Tokens de diseño PeakNote — fuente única. Paleta extraída del QSS/.ui original. */
+:root {
+  /* Paleta de marca (legado) */
+  --teal-950: #063737;
+  --teal-800: #0b5b5b;
+  --teal-700: #0e7575;
+  --teal-600: #108585;
+  --mint-500: #18c3a6;
+  --mint-50: #e6fffb;
+  --slate-panel: #263238;
+  --slate-600: #37474f;
+  --green-action: #4caf50;
+  --green-action-hover: #45a049;
+  --rose-soft: #ff798d;
+
+  /* Escala de espaciado (4 px) */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px; --s-12: 48px;
+  --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 24px; --r-pill: 999px;
+
+  /* Movimiento */
+  --dur-fast: 150ms;
+  --dur: 300ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --tap: 44px;
+  --sidebar-w: 250px;
+
+  /* Semánticos — tema oscuro (identidad) */
+  color-scheme: dark;
+  --bg: #0a1011;
+  --bg-grad: radial-gradient(120% 80% at 0% 0%, #0d2a2a 0%, #0a1011 55%);
+  --surface: #111a1b;
+  --surface-2: #172324;
+  --surface-3: #1e2e2f;
+  --border: rgba(230, 255, 251, 0.1);
+  --border-strong: rgba(230, 255, 251, 0.22);
+  --text: #e6fffb;
+  --text-muted: #9cb9b5;
+  --accent: #18c3a6;
+  --accent-hover: #3fd6bb;
+  --on-accent: #032a24;
+  --accent-soft: rgba(24, 195, 166, 0.14);
+  --danger: #ff798d;
+  --danger-soft: rgba(255, 121, 141, 0.14);
+  --on-danger: #2a0510;
+  --focus: #6ff0d8;
+  --sidebar-bg: #263238;
+  --sidebar-text: #e6eef0;
+  --sidebar-muted: #aebec4;
+  --scrim: rgba(3, 10, 10, 0.6);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+  /* Literales: la letra siempre acompaña al color */
+  --lit-A: #18c3a6; --lit-A-bg: rgba(24, 195, 166, 0.16);
+  --lit-B: #6fd3e0; --lit-B-bg: rgba(111, 211, 224, 0.14);
+  --lit-C: #e8c25a; --lit-C-bg: rgba(232, 194, 90, 0.14);
+  --lit-D: #f0985b; --lit-D-bg: rgba(240, 152, 91, 0.15);
+  --lit-E: #ff798d; --lit-E-bg: rgba(255, 121, 141, 0.15);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3f8f7;
+  --bg-grad: linear-gradient(180deg, #eaf5f3 0%, #f3f8f7 40%);
+  --surface: #ffffff;
+  --surface-2: #eef5f4;
+  --surface-3: #e1eeec;
+  --border: rgba(6, 55, 55, 0.14);
+  --border-strong: rgba(6, 55, 55, 0.3);
+  --text: #0d2a2a;
+  --text-muted: #476563;
+  --accent: #0e7575;
+  --accent-hover: #0b5b5b;
+  --on-accent: #ffffff;
+  --accent-soft: rgba(14, 117, 117, 0.1);
+  --danger: #c0334a;
+  --danger-soft: rgba(192, 51, 74, 0.1);
+  --on-danger: #ffffff;
+  --focus: #0b5b5b;
+  --scrim: rgba(6, 55, 55, 0.35);
+  --shadow: 0 10px 30px rgba(6, 55, 55, 0.18);
+  --lit-A: #0b7f6c; --lit-A-bg: rgba(24, 195, 166, 0.2);
+  --lit-B: #1b7a8a; --lit-B-bg: rgba(111, 211, 224, 0.25);
+  --lit-C: #8a6a00; --lit-C-bg: rgba(232, 194, 90, 0.28);
+  --lit-D: #a24f0f; --lit-D-bg: rgba(240, 152, 91, 0.25);
+  --lit-E: #b3223a; --lit-E-bg: rgba(255, 121, 141, 0.22);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #f3f8f7;
+    --bg-grad: linear-gradient(180deg, #eaf5f3 0%, #f3f8f7 40%);
+    --surface: #ffffff;
+    --surface-2: #eef5f4;
+    --surface-3: #e1eeec;
+    --border: rgba(6, 55, 55, 0.14);
+    --border-strong: rgba(6, 55, 55, 0.3);
+    --text: #0d2a2a;
+    --text-muted: #476563;
+    --accent: #0e7575;
+    --accent-hover: #0b5b5b;
+    --on-accent: #ffffff;
+    --accent-soft: rgba(14, 117, 117, 0.1);
+    --danger: #c0334a;
+    --danger-soft: rgba(192, 51, 74, 0.1);
+    --on-danger: #ffffff;
+    --focus: #0b5b5b;
+    --scrim: rgba(6, 55, 55, 0.35);
+    --shadow: 0 10px 30px rgba(6, 55, 55, 0.18);
+    --lit-A: #0b7f6c; --lit-A-bg: rgba(24, 195, 166, 0.2);
+    --lit-B: #1b7a8a; --lit-B-bg: rgba(111, 211, 224, 0.25);
+    --lit-C: #8a6a00; --lit-C-bg: rgba(232, 194, 90, 0.28);
+    --lit-D: #a24f0f; --lit-D-bg: rgba(240, 152, 91, 0.25);
+    --lit-E: #b3223a; --lit-E-bg: rgba(255, 121, 141, 0.22);
+  }
+}

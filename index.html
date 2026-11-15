@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es-VE">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PeakNote</title>
+  <meta name="description" content="PeakNote: asistencia, calificaciones por literal y matrícula para docentes de primaria. Funciona sin conexión." />
+  <meta name="theme-color" content="#063737" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="PeakNote" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <script>
+    /* Aplica el tema guardado antes de pintar (evita parpadeo). */
+    try { var t = localStorage.getItem('pn.theme') || 'dark'; if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="src/styles/tokens.css" />
+  <link rel="stylesheet" href="src/styles/base.css" />
+  <link rel="stylesheet" href="src/styles/components.css" />
+  <link rel="stylesheet" href="src/styles/screens.css" />
+  <script type="module" src="src/main.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="toasts" role="status" aria-live="polite"></div>
+  <noscript><p style="padding:24px;font-family:sans-serif">PeakNote necesita JavaScript para funcionar.</p></noscript>
+</body>
+</html>
